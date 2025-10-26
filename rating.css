@@ -1,0 +1,203 @@
+
+
+
+                    /**************************/
+                    /*   Custom properties   */
+                    /*************************/
+
+:root{
+
+                        /* primary color */ 
+--orange: 25, 97%, 53%;
+
+
+
+--white: 0, 100%, 100%;
+
+
+--Grey-500: 217, 12%, 63%;
+--Grey-900: 213, 19%, 18%;
+--Grey-950: 216, 12%, 8%;
+                            /* Typography */
+
+                        /*font family*/
+                        --ff: "Overpass", sans-serif;
+                        /*font weight*/
+                        --fw-400: 400;
+                        --fw-700: 700;
+                        /*font size*/
+                        --fs-100: 15px;
+
+                        /**/
+}
+/*---- box sizing ----*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;}
+                                            /**************************/
+                                             /*    Margin reset    */
+                                             /*************************/
+html {
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+picture {
+    margin: 0;
+}
+:is( h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+picture){
+    max-inline-size: initial;
+    block-size: auto;
+    margin-block-start: 1rem;
+
+}
+                /*---------make image easier to work with-----*/
+img,
+picture {
+    max-inline-size: 100%;
+    block-size: auto;
+    max-width: 100%;
+    display: block;
+}
+
+                        /**************************/
+                        /*    Utility classes   */
+                        /*************************/
+
+.orange-text { color: hsl(var(--orange));}
+.orange-bg  { background-color: hsl(var(--orange));}
+
+.white-text { color: hsl(var(--white));}
+.white-bg  { background-color: hsl(var(--white));}
+
+.grey-500-text { color: hsl(var(--Grey-500));}
+.grey-500-bg { background-color: hsl(var(--Grey-500));}
+
+.grey-900-text { color: hsl(var(--Grey-900));}
+.grey-900-bg { background-color: hsl(var(--Grey-900));}
+
+.grey-950-text { color: hsl(var(--Grey-950));}
+.grey-950-bg { background-color: hsl(var(--Grey-950));}
+
+
+.fw-400 { font-weight: 400;}
+.fw-700 {font-weight: 700;}
+
+.size { font-size: var(--fs-100);}
+               
+                        /**************************/
+                        /*    General style      */
+                        /*************************/
+/**/
+
+.mylist li button:hover{
+    background-color: hsl(var(--orange));
+    color: hsl(var(--black));
+    cursor: pointer;
+}
+
+            /**/
+.mylist li button:focus{
+    font-weight: var(--fw-700);
+    background-color: hsl(var(--white));
+    color: hsl(var(--black));
+    cursor: pointer;
+}
+
+
+.mylist li{
+    padding: 0.5rem;   
+
+}
+
+.mylist li button{
+    border: 0px;
+    border-radius: 100vw;
+    padding: 16px;
+    background-color: hsl(var(--Grey-500), .1);
+
+}
+
+
+.mylist{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px;
+    
+}
+
+body {
+    font-family: var(--ff);
+    font-size: var(--fs-100);  
+    margin: 2rem; 
+    height: 100vh;
+    line-height: 1.5;
+    background-color: hsl(var(--Grey-950)); 
+    display: flex;
+    flex-direction: column;
+}
+
+.thank-you, main {
+    margin: auto;  
+   padding: 0.986rem;
+   text-align: center;
+   border: 1px solid white;
+    background-color: hsl(var(--Grey-900)); 
+    border-radius: 1vw;
+    max-width: 475px;
+
+}
+
+
+.thank-you {
+    margin-top: .1rem;
+}
+.hidden {
+
+    display: none;
+}
+
+.rate-img {
+  margin: auto;
+}
+
+.submit:hover{
+
+    background-color: hsl(var(--white));
+    color: hsl(var(--black));
+    font-weight: var(--fw-700);
+}
+
+.submit {
+    border-radius: 50vh;
+    padding-block: 0.35rem;
+    max-width: 85%;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+
+    .attribution { font-size: 19px; text-align: center;
+        color: hsl(var(--white));
+    }
+    .attribution a { color: hsl(239, 74%, 48%); }
